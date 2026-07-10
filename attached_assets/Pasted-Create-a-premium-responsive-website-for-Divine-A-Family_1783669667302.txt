@@ -1,0 +1,172 @@
+Create a premium, responsive website for "Divine A Family Unisex Salon" inspired by the modern, elegant style of Footspace Cafe Chandigarh's website. Do not copy the design exactly—use the same premium feel, smooth animations, and clean layout while creating a unique beauty salon website.
+
+Theme:
+- Luxury, elegant, modern.
+- Color Palette:
+  - White (#FFFFFF)
+  - Black (#111111)
+  - Gold (#C9A227)
+  - Light Beige (#F8F5F2)
+- Typography:
+  - Headings: Playfair Display
+  - Body: Poppins
+
+Website Features:
+- Fully responsive for desktop, tablet, and mobile.
+- Smooth scrolling.
+- Fade-in animations while scrolling.
+- Hover animations on buttons and cards.
+- Sticky transparent navigation bar that becomes solid while scrolling.
+- Professional loading animation.
+- Glassmorphism effects where appropriate.
+- Fast loading and SEO optimized.
+
+Navigation:
+- Home
+- About
+- Services
+- Gallery
+- Reviews
+- Contact
+
+Hero Section:
+Full-screen salon background image/video with dark overlay.
+
+Heading:
+"Where Beauty Meets Perfection"
+
+Subheading:
+Premium hair, skin & makeup services crafted to make you look and feel your best.
+
+Buttons:
+Book Appointment
+WhatsApp
+
+About Section:
+Title:
+About Divine Unisex Salon
+
+Content:
+Divine A Family Unisex Salon is a trusted beauty destination in Sector 37C, Chandigarh. We provide professional haircuts, hair coloring, keratin, smoothing, facials, makeup, skincare, grooming, and beauty treatments for both men and women. Our experienced team focuses on quality, hygiene, personalized care, and customer satisfaction to deliver exceptional results every visit.
+
+Services Section:
+Create elegant service cards with icons.
+
+Hair Services
+- Haircut
+- Hair Spa
+- Hair Color
+- Global Highlights
+- Keratin
+- Hair Smoothing
+- Rebonding
+
+Skin Care
+- Cleanup
+- Facial
+- Detan
+- Bleach
+- Skin Treatments
+
+Beauty Services
+- Makeup
+- Bridal Makeup
+- Party Makeup
+- Waxing
+- Threading
+- Manicure
+- Pedicure
+
+Gallery:
+Modern masonry gallery with hover zoom effect.
+Use placeholders for salon images.
+
+Why Choose Us:
+Create six premium cards.
+
+✔ Experienced Professionals
+✔ Premium Products
+✔ Hygienic Environment
+✔ Personalized Consultation
+✔ Affordable Luxury
+✔ Customer Satisfaction
+
+Customer Reviews:
+Display Google rating prominently.
+
+⭐⭐⭐⭐⭐
+4.9/5 Google Rating
+
+Include review cards:
+
+"Pallavi Atoria"
+Had a wonderful experience. Professional, friendly staff and excellent hygiene. Loved the results.
+
+"Poonam Rai"
+Best salon! Dedicated staff with amazing makeup and beauty services.
+
+"Nandani"
+Loved my global highlights. Perfect finishing and beautiful colour.
+
+"Silky Mehra"
+Excellent hair smoothing, keratin and highlights. Highly recommended.
+
+Contact Section:
+Salon Name:
+Divine A Family Unisex Salon
+
+Address:
+SCO 176, 1st Floor, Main Market,
+Sector 37C,
+Chandigarh – 160036
+
+Phone:
++91 94788 09160
+
+Opening Hours:
+Monday – Sunday
+10:00 AM – 9:00 PM
+
+Buttons:
+Call Now
+WhatsApp
+Get Directions
+
+Google Maps:
+Embed the salon location.
+
+Footer:
+Divine A Family Unisex Salon
+
+Quick Links
+Services
+Gallery
+Reviews
+Contact
+
+Social Icons:
+Instagram
+WhatsApp
+Google Maps
+
+Instagram:
+https://www.instagram.com/divinesalon.37/
+
+WhatsApp:
+https://wa.me/919478809160
+
+Map:
+https://jsdl.in/DT-19RIJRNL5SC
+
+Extra Features:
+- Floating WhatsApp button.
+- Sticky "Book Appointment" button on mobile.
+- Back-to-top button.
+- Image lazy loading.
+- Scroll progress indicator.
+- Beautiful section transitions.
+- SEO meta title and description.
+- Modern rounded cards.
+- Accessible contrast and typography.
+
+The final website should feel premium, luxurious, interactive, and visually similar in quality and user experience to Footspace Cafe Chandigarh's website while maintaining a unique identity for Divine A Family Unisex Salon.

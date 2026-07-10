@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Divine A Family Unisex Salon"
+version = "1.0.0"
+id = "artifacts/divine-salon"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25167
+
+[services.development]
+run = "pnpm --filter @workspace/divine-salon run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/divine-salon", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/divine-salon/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25167"
+BASE_PATH = "/"
