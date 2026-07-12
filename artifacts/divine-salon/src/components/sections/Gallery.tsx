@@ -1,19 +1,23 @@
 import { motion } from 'framer-motion';
 
-import imgHairStyling from '@assets/generated_images/gallery-hair-styling.jpg';
-import imgBridalMakeup from '@assets/generated_images/gallery-bridal-makeup.jpg';
-import imgSkincare from '@assets/generated_images/gallery-skincare.jpg';
-import imgNailArt from '@assets/generated_images/gallery-nail-art.jpg';
-import imgHairColor from '@assets/generated_images/gallery-hair-color.jpg';
-import imgFacial from '@assets/generated_images/gallery-facial.jpg';
+import imgHairStyling from '@assets/6_IMG_7332_1783674227733.jpeg';
+import imgBridalHair from '@assets/3_IMG_7335_1783674227732.jpeg';
+import imgMakeup from '@assets/4_IMG_7334_1783674227733.jpeg';
+import imgNailArt from '@assets/5_IMG_7333_1783674227733.jpeg';
+import imgWavyHair from '@assets/7f26904e-2749-444d-ba00-9e3348a838ec_1783840730872.jpeg';
+import imgHairColor from '@assets/gallery_hair_color.jpg';
+import imgNailReveal from '@assets/gallery_nail_reveal.jpg';
+import imgSalonInterior from '@assets/0_IMG_7338_1783674227732.jpeg';
 
 const images = [
-  { src: imgHairStyling, alt: 'Elegant Hair Styling', title: 'Hair Styling' },
-  { src: imgBridalMakeup, alt: 'Bridal Makeup Look', title: 'Bridal Makeup' },
-  { src: imgSkincare, alt: 'Glowing Skincare Routine', title: 'Skincare' },
+  { src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
+  { src: imgBridalHair, alt: 'Bridal Hair Updo', title: 'Bridal Hair' },
+  { src: imgMakeup, alt: 'Party Makeup Look', title: 'Makeup' },
   { src: imgNailArt, alt: 'Luxury Nail Art', title: 'Nail Art' },
-  { src: imgHairColor, alt: 'Hair Coloring Highlights', title: 'Hair Coloring' },
-  { src: imgFacial, alt: 'Relaxing Facial Treatment', title: 'Facial Treatment' }
+  { src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
+  { src: imgHairColor, alt: 'Rich Hair Coloring', title: 'Hair Coloring' },
+  { src: imgNailReveal, alt: 'Manicure Finish', title: 'Manicure' },
+  { src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
 ];
 
 export function Gallery() {
@@ -31,14 +35,14 @@ export function Gallery() {
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Our Masterpieces</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {images.map((img, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.08 }}
               className="relative group overflow-hidden aspect-[4/5] rounded-sm bg-muted"
             >
               <img

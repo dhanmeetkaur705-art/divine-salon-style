@@ -26,7 +26,7 @@ export function LoadingScreen() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-serif font-bold tracking-tight text-white flex items-baseline"
           >
-            <span>Divine A</span>
+            <span>Divine</span>
             <motion.span 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
