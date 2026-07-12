@@ -2,21 +2,19 @@ import { motion } from 'framer-motion';
 
 import imgHairStyling from '@assets/6_IMG_7332_1783674227733.jpeg';
 import imgBridalHair from '@assets/3_IMG_7335_1783674227732.jpeg';
-import imgMakeup from '@assets/4_IMG_7334_1783674227733.jpeg';
 import imgNailArt from '@assets/5_IMG_7333_1783674227733.jpeg';
 import imgWavyHair from '@assets/7f26904e-2749-444d-ba00-9e3348a838ec_1783840730872.jpeg';
 import imgHairColor from '@assets/gallery_hair_color.jpg';
-import imgNailReveal from '@assets/gallery_nail_reveal.jpg';
+import imgClientPortrait from '@assets/7281a472-b6ca-40df-9f3f-a7f7329519db_1783863997115.jpeg';
 import imgSalonInterior from '@assets/0_IMG_7338_1783674227732.jpeg';
 
 const images = [
   { src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
   { src: imgBridalHair, alt: 'Bridal Hair Updo', title: 'Bridal Hair' },
-  { src: imgMakeup, alt: 'Party Makeup Look', title: 'Makeup' },
+  { src: imgClientPortrait, alt: 'Happy Client Look', title: 'Client Look' },
   { src: imgNailArt, alt: 'Luxury Nail Art', title: 'Nail Art' },
   { src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
   { src: imgHairColor, alt: 'Rich Hair Coloring', title: 'Hair Coloring' },
-  { src: imgNailReveal, alt: 'Manicure Finish', title: 'Manicure' },
   { src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
 ];
 

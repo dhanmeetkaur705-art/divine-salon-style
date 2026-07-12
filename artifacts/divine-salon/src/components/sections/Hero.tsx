@@ -65,22 +65,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
-      >
-        <span className="text-white/60 text-xs tracking-widest uppercase">Scroll Discover</span>
-        <div className="w-[1px] h-12 bg-white/30 overflow-hidden relative">
-          <motion.div
-            animate={{ y: [0, 48, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-            className="w-full h-1/2 bg-primary absolute top-0 left-0"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }
