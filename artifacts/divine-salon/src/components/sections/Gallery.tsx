@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 
 import imgHairStyling from '@assets/e00c1ad3-7d20-4a07-a2fa-51cbe5518de8_1783936509999.jpeg';
 import imgBridalHair from '@assets/3_IMG_7335_1783674227732.jpeg';
-import imgNailArt from '@assets/5_IMG_7333_1783674227733.jpeg';
 import imgWavyHair from '@assets/6e2d1354-9e78-4922-9562-b3e8bb67a1ad_1783936509999.jpeg';
 import imgClientPortrait from '@assets/7281a472-b6ca-40df-9f3f-a7f7329519db_1783863997115.jpeg';
 import imgBlowDry from '@assets/IMG_7410_1783935286239.jpeg';
@@ -16,7 +15,6 @@ const images = [
   { type: 'image' as const, src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
   { type: 'image' as const, src: imgBridalHair, alt: 'Bridal Hair Updo', title: 'Bridal Hair' },
   { type: 'image' as const, src: imgClientPortrait, alt: 'Happy Client Look', title: 'Client Look' },
-  { type: 'image' as const, src: imgNailArt, alt: 'Luxury Nail Art', title: 'Nail Art' },
   { type: 'image' as const, src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
   { type: 'video' as const, src: vidBlowDry, alt: 'Blow Dry Styling', title: 'Blow Dry' },
   { type: 'image' as const, src: imgManicure, alt: 'Manicure Finish', title: 'Manicure' },
