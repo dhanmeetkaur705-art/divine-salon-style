@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 
-import imgHairStyling from '@assets/6_IMG_7332_1783674227733.jpeg';
+import imgHairStyling from '@assets/e00c1ad3-7d20-4a07-a2fa-51cbe5518de8_1783936509999.jpeg';
 import imgBridalHair from '@assets/3_IMG_7335_1783674227732.jpeg';
 import imgNailArt from '@assets/5_IMG_7333_1783674227733.jpeg';
-import imgWavyHair from '@assets/7f26904e-2749-444d-ba00-9e3348a838ec_1783840730872.jpeg';
+import imgWavyHair from '@assets/6e2d1354-9e78-4922-9562-b3e8bb67a1ad_1783936509999.jpeg';
 import imgClientPortrait from '@assets/7281a472-b6ca-40df-9f3f-a7f7329519db_1783863997115.jpeg';
 import imgBlowDry from '@assets/IMG_7410_1783935286239.jpeg';
 import imgManicure from '@assets/IMG_7409_1783935286239.jpeg';
+import imgLongStraightHair from '@assets/80166643-f2dd-4d4c-b91a-629208c60032_1783936600400.jpeg';
 import imgSalonInterior from '@assets/0_IMG_7338_1783674227732.jpeg';
 
 const images = [
@@ -17,6 +18,7 @@ const images = [
   { src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
   { src: imgBlowDry, alt: 'Blow Dry Styling', title: 'Blow Dry' },
   { src: imgManicure, alt: 'Manicure Finish', title: 'Manicure' },
+  { src: imgLongStraightHair, alt: 'Long Straight Hair Styling', title: 'Hair Straightening' },
   { src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
 ];
 
