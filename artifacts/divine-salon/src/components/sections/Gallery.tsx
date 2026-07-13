@@ -26,25 +26,43 @@ const images = [
 
 function GalleryVideo({ src, alt }: { src: string; alt: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hasLoadedRef = useRef(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
+    let retried = false;
+
     const tryPlay = () => {
-      video.play().catch(() => {
-        // Autoplay was blocked; retry once metadata/data is ready.
-      });
+      const p = video.play();
+      if (p) {
+        p.catch(() => {
+          // Autoplay blocked or interrupted (e.g. mobile decoder contention) — retry shortly.
+          window.setTimeout(() => {
+            video.play().catch(() => {});
+          }, 300);
+        });
+      }
     };
 
-    tryPlay();
-    video.addEventListener('loadeddata', tryPlay);
-    video.addEventListener('canplay', tryPlay);
+    const handleError = () => {
+      // A genuine decode/network error occurred; reload the source once and try again.
+      if (retried) return;
+      retried = true;
+      video.load();
+      tryPlay();
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            if (!hasLoadedRef.current) {
+              hasLoadedRef.current = true;
+              video.src = src;
+              video.load();
+            }
             tryPlay();
           } else {
             video.pause();
@@ -55,22 +73,27 @@ function GalleryVideo({ src, alt }: { src: string; alt: string }) {
     );
     observer.observe(video);
 
+    video.addEventListener('loadeddata', tryPlay);
+    video.addEventListener('canplay', tryPlay);
+    video.addEventListener('error', handleError);
+    video.addEventListener('stalled', handleError);
+
     return () => {
       video.removeEventListener('loadeddata', tryPlay);
       video.removeEventListener('canplay', tryPlay);
+      video.removeEventListener('error', handleError);
+      video.removeEventListener('stalled', handleError);
       observer.disconnect();
     };
-  }, []);
+  }, [src]);
 
   return (
     <video
       ref={videoRef}
-      src={src}
-      autoPlay
       muted
       loop
       playsInline
-      preload="auto"
+      preload="metadata"
       aria-label={alt}
       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
     />
