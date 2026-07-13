@@ -9,8 +9,8 @@ import imgBlowDry from '@assets/IMG_7410_1783935286239.jpeg';
 import imgManicure from '@assets/IMG_7409_1783935286239.jpeg';
 import imgLongStraightHair from '@assets/80166643-f2dd-4d4c-b91a-629208c60032_1783936600400.jpeg';
 import imgSalonInterior from '@assets/0_IMG_7338_1783674227732.jpeg';
-import vidHairColor from '@assets/89d01305-f083-4118-9f62-c7ab79dc7036_1783936834504.mov';
-import vidBlowDry from '@assets/01e69d80-59a3-48d1-b222-b465f3ac8dcc_1783936896437.mov';
+import vidHairColor from '@assets/gallery-haircolor.mp4';
+import vidBlowDry from '@assets/gallery-blowdry-mirror.mp4';
 
 const images = [
   { type: 'image' as const, src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
