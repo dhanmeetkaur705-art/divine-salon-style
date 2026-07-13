@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 import imgHairStyling from '@assets/e00c1ad3-7d20-4a07-a2fa-51cbe5518de8_1783936509999.jpeg';
 import imgBridalHair from '@assets/3_IMG_7335_1783674227732.jpeg';
@@ -22,6 +23,59 @@ const images = [
   { type: 'video' as const, src: vidHairColor, alt: 'Hair Color Transformation', title: 'Hair Coloring' },
   { type: 'image' as const, src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
 ];
+
+function GalleryVideo({ src, alt }: { src: string; alt: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        // Autoplay was blocked; retry once metadata/data is ready.
+      });
+    };
+
+    tryPlay();
+    video.addEventListener('loadeddata', tryPlay);
+    video.addEventListener('canplay', tryPlay);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            tryPlay();
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(video);
+
+    return () => {
+      video.removeEventListener('loadeddata', tryPlay);
+      video.removeEventListener('canplay', tryPlay);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      aria-label={alt}
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+  );
+}
 
 export function Gallery() {
   return (
@@ -49,16 +103,7 @@ export function Gallery() {
               className="relative group overflow-hidden aspect-[4/5] rounded-sm bg-muted"
             >
               {img.type === 'video' ? (
-                <video
-                  src={img.src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <GalleryVideo src={img.src} alt={img.alt} />
               ) : (
                 <img
                   src={img.src}
