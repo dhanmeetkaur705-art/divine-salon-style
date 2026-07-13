@@ -9,17 +9,20 @@ import imgBlowDry from '@assets/IMG_7410_1783935286239.jpeg';
 import imgManicure from '@assets/IMG_7409_1783935286239.jpeg';
 import imgLongStraightHair from '@assets/80166643-f2dd-4d4c-b91a-629208c60032_1783936600400.jpeg';
 import imgSalonInterior from '@assets/0_IMG_7338_1783674227732.jpeg';
+import vidHairColor from '@assets/89d01305-f083-4118-9f62-c7ab79dc7036_1783936834504.mov';
+import vidBlowDry from '@assets/01e69d80-59a3-48d1-b222-b465f3ac8dcc_1783936896437.mov';
 
 const images = [
-  { src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
-  { src: imgBridalHair, alt: 'Bridal Hair Updo', title: 'Bridal Hair' },
-  { src: imgClientPortrait, alt: 'Happy Client Look', title: 'Client Look' },
-  { src: imgNailArt, alt: 'Luxury Nail Art', title: 'Nail Art' },
-  { src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
-  { src: imgBlowDry, alt: 'Blow Dry Styling', title: 'Blow Dry' },
-  { src: imgManicure, alt: 'Manicure Finish', title: 'Manicure' },
-  { src: imgLongStraightHair, alt: 'Long Straight Hair Styling', title: 'Hair Straightening' },
-  { src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
+  { type: 'image' as const, src: imgHairStyling, alt: 'Layered Hair Styling', title: 'Hair Styling' },
+  { type: 'image' as const, src: imgBridalHair, alt: 'Bridal Hair Updo', title: 'Bridal Hair' },
+  { type: 'image' as const, src: imgClientPortrait, alt: 'Happy Client Look', title: 'Client Look' },
+  { type: 'image' as const, src: imgNailArt, alt: 'Luxury Nail Art', title: 'Nail Art' },
+  { type: 'image' as const, src: imgWavyHair, alt: 'Beachy Hair Waves', title: 'Hair Waves' },
+  { type: 'video' as const, src: vidBlowDry, alt: 'Blow Dry Styling', title: 'Blow Dry' },
+  { type: 'image' as const, src: imgManicure, alt: 'Manicure Finish', title: 'Manicure' },
+  { type: 'image' as const, src: imgLongStraightHair, alt: 'Long Straight Hair Styling', title: 'Hair Straightening' },
+  { type: 'video' as const, src: vidHairColor, alt: 'Hair Color Transformation', title: 'Hair Coloring' },
+  { type: 'image' as const, src: imgSalonInterior, alt: 'Salon Ambience', title: 'Our Salon' },
 ];
 
 export function Gallery() {
@@ -47,12 +50,25 @@ export function Gallery() {
               transition={{ duration: 0.6, delay: idx * 0.08 }}
               className="relative group overflow-hidden aspect-[4/5] rounded-sm bg-muted"
             >
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
+              {img.type === 'video' ? (
+                <video
+                  src={img.src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              ) : (
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              )}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                 <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-white font-serif text-xl font-medium tracking-wide block">

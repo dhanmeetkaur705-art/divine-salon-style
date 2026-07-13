@@ -29,6 +29,7 @@ if (!basePath) {
 
 export default defineConfig({
   base: basePath,
+  assetsInclude: ['**/*.mov'],
   plugins: [
     react(),
     tailwindcss(),
