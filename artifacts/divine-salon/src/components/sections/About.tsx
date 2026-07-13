@@ -21,7 +21,7 @@ export function About() {
               Divine Unisex Salon is a trusted beauty destination in Sector 37C, Chandigarh. We are dedicated to providing a premium, serene environment where you can relax, rejuvenate, and reinvent yourself.
             </p>
             <p>
-              We provide professional haircuts, hair coloring, keratin, smoothing, facials, makeup, skincare, grooming, and beauty treatments for both men and women. We use premium L'Oréal and Schwarzkopf professional colours for all our hair coloring services.
+              We provide professional haircuts, hair coloring, keratin, smoothing, facials, makeup, skincare, grooming, and beauty treatments for both men and women. <strong className="text-foreground font-semibold">We use premium L'Oréal and Schwarzkopf professional colours</strong> for all our hair coloring services.
             </p>
             <p>
               Our experienced team focuses on quality, hygiene, personalized care, and customer satisfaction to deliver exceptional results every visit. Step into our world of effortless sophistication and leave feeling deeply confident.
